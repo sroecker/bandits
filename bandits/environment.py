@@ -33,6 +33,9 @@ class Environment(object):
                     if is_optimal:
                         optimal[t, i] += 1
 
+                if hasattr(self.bandit, '_cursor'):
+                    self.bandit._cursor += 1
+
         return scores / experiments, optimal / experiments
 
     def plot_results(self, scores, optimal):

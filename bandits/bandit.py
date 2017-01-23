@@ -83,7 +83,6 @@ class BinomialBandit(MultiArmedBandit):
             return self.bin.random()
         else:
             val = self._samples[self._cursor]
-            self._cursor += 1
             return val
 
 
